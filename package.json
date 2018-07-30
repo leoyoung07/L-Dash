@@ -5,7 +5,9 @@
   "main": "index.ts",
   "scripts": {
     "build": "webpack --mode=production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha dist/test",
+    "pretest": "npm run build && npm run build-test",
+    "build-test": "webpack --mode=production --config webpack.config.test.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,10 @@
   },
   "homepage": "https://github.com/leoyoung07/l-dash#readme",
   "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
     "ts-loader": "^4.4.2",
     "typescript": "^2.9.2",
     "webpack": "^4.16.3",

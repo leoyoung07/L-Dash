@@ -1,2 +1,5 @@
-// tslint:disable-next-line:no-console
-console.log('hello');
+export default class LDash {
+  public static trimStr(str: string) {
+    return str.replace(/^\s*|\s*$/gi, '');
+  }
+}
