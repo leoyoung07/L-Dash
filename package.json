@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
+    "start": "npm run test",
     "build": "webpack --mode=production",
     "test": "mocha dist/test",
     "pretest": "npm run build && npm run build-test",
