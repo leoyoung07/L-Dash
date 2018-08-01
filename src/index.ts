@@ -12,6 +12,30 @@ export default class LDash {
     return LDash.typeOf(obj) === '[object String]';
   }
 
+  public static isNumber(obj: any) {
+    return LDash.typeOf(obj) === '[object Number]';
+  }
+
+  public static isNull(obj: any) {
+    return LDash.typeOf(obj) === '[object Null]';
+  }
+
+  public static isBoolean(obj: any) {
+    return LDash.typeOf(obj) === '[object Boolean]';
+  }
+
+  public static isUndefined(obj: any) {
+    return LDash.typeOf(obj) === '[object Undefined]';
+  }
+
+  public static isFunction(obj: any) {
+    return LDash.typeOf(obj) === '[object Function]';
+  }
+
+  public static isObject(obj: any) {
+    return LDash.typeOf(obj) === '[object Object]';
+  }
+
   constructor(
     private target: string
   ) {
