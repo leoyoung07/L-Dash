@@ -13,9 +13,27 @@ describe('typeOf', () => {
   });
 });
 
-describe('isString', () => {
-  it('should return is string or not', () => {
+describe('type detections', () => {
+  it('isString', () => {
     expect(LDash.isString('hello')).equal(true);
+  });
+  it('isNumber', () => {
+    expect(LDash.isNumber(1)).equal(true);
+  });
+  it('isBoolean', () => {
+    expect(LDash.isBoolean(true)).equal(true);
+  });
+  it('isNull', () => {
+    expect(LDash.isNull(null)).equal(true);
+  });
+  it('isUndefined', () => {
+    expect(LDash.isUndefined(undefined)).equal(true);
+  });
+  it('isFunction', () => {
+    expect(LDash.isFunction(() => '')).equal(true);
+  });
+  it('isObject', () => {
+    expect(LDash.isObject({})).equal(true);
   });
 });
 
